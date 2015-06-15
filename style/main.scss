@@ -2,6 +2,6 @@
 @import "neat/neat";
 @import "base/base";
 
-.container {
+#container {
     @include outer-container();
 }
