@@ -2,6 +2,92 @@
 @import "neat/neat";
 @import "base/base";
 
-#container {
+body {
     @include outer-container();
+}
+
+section {
+    @include span-columns(6);
+    @include omega(2n);
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    .container {
+        min-width: 400px;
+        height: 320px;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            text {
+                font-size: 11px;
+            }
+
+            .line {
+                fill: none;
+                stroke: #eeeeee;
+                stroke-width: 2px;
+            }
+
+            .dot {
+                fill: #cccccc;
+                fill-opacity: 1.0;
+                stroke-width: 2px;
+
+                &--datapoint-ideal {
+                    fill: green;
+
+                    &:hover {
+                        stroke: darken(green, 3%);
+                    }
+                }
+                &--datapoint-minor {
+                    fill: yellow;
+
+                    &:hover {
+                        stroke: darken(yellow, 3%);
+                    }
+                }
+                &--datapoint-major {
+                    fill: red;
+
+                    &:hover {
+                        stroke: darken(red, 3%);
+                    }
+                }
+                &--datapoint-unknown {
+                    fill: #cccccc;
+
+                    &:hover {
+                        stroke: darken(red, 3%);
+                        cursor: not-allowed;
+                    }
+                }
+            }
+
+            .ideal-zone {
+                fill: green;
+                opacity: 0.2;
+            }
+        }
+    }
+}
+
+.tooltip {
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #8b8b8b;
+    color: #8b8b8b;
+
+    > .datapoint-ideal {
+        color: darken(green, 5%);
+    }
+    > .datapoint-minor {
+        color: darken(yellow, 5%);
+    }
+    > .datapoint-major {
+        color: darken(red, 5%);
+    }
 }

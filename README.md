@@ -23,18 +23,20 @@ $ gulp
 # Dependencies
 You could do without most of these 'dependencies', but this is the default setup.
 
-### Components (bower)
-```js
-d3: ~3.5.5          // obviously
-jquery: ~2.1.4      // just in case
-```
-
 ### Modules (npm)
 ```js
+babelify: ^6.1.2            // transpile es6 to es5 as a browserify transform
 browser-sync: ^2.7.10       // spend less time refreshing your page
+browserify: ^10.2.4         // module bundler etc.
+d3: ^3.5.5                  // obviously (this time via npm)
+domready: ^1.0.8            // to execute the bundle on domready
 gulp: ^3.9.0                // tie it all together
 gulp-sass: ^2.0.1           // easy-peasy precompile
 gulp-sourcemaps: ^1.5.2     // completely unnecessary, really
+gulp-util: ^3.0.5           // access to gulp logging
+lodash: ^3.9.3              // useful functions
+vinyl-buffer: ^1.0.0
+vinyl-source-stream: ^1.1.0
 ```
 
 # Extras

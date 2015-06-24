@@ -1,12 +1,8 @@
 {
   "name": "d3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     "Byron Varberg <byron.varberg@cerner.com>"
   ],
-  "private": true,
-  "devDependencies": {
-    "d3": "~3.5.5",
-    "jquery": "~2.1.4"
-  }
+  "private": true
 }

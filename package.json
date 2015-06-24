@@ -1,6 +1,6 @@
 {
   "name": "d3-sandbox",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A d3 sandbox.",
   "main": "index.js",
   "scripts": {
@@ -9,9 +9,19 @@
   "author": "BV034689",
   "private": true,
   "devDependencies": {
+    "babelify": "^6.1.2",
     "browser-sync": "^2.7.10",
+    "browserify": "^10.2.4",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.0.1",
-    "gulp-sourcemaps": "^1.5.2"
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "d3": "^3.5.5",
+    "domready": "^1.0.8",
+    "lodash": "^3.9.3"
   }
 }
